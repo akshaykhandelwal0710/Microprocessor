@@ -1,0 +1,89 @@
+$date
+	Tue Nov 01 19:25:45 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ram $end
+$var wire 8 ! MAR [7:0] $end
+$var wire 1 " MFC $end
+$var wire 8 # bus [7:0] $end
+$var wire 1 $ enable $end
+$var wire 1 % rnw $end
+$var reg 8 & MBR [7:0] $end
+$var reg 1 ' tmp $end
+$upscope $end
+$scope module test_bench $end
+$var wire 8 ( bus [7:0] $end
+$var reg 8 ) MAR [7:0] $end
+$var reg 1 * clock $end
+$var reg 1 + increment $end
+$var reg 1 , pc_out $end
+$scope module program_counter $end
+$var wire 1 * CLK $end
+$var wire 1 + increment $end
+$var wire 1 , pc_out $end
+$var wire 8 - bus [7:0] $end
+$var reg 8 . addr_in [7:0] $end
+$var reg 8 / addr_out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 /
+b0 .
+bx -
+0,
+0+
+0*
+b1 )
+bx (
+0'
+bx &
+z%
+z$
+bz #
+0"
+bz !
+$end
+#5
+b1 (
+b1 -
+b1 /
+b1 .
+1,
+1+
+1*
+#10
+0*
+0,
+0+
+#15
+b10 (
+b10 -
+b10 /
+b10 .
+1*
+1+
+1,
+#20
+0*
+0+
+#25
+b11 /
+b11 .
+1*
+0,
+1+
+#30
+0*
+#35
+b100 /
+b100 .
+1*
+#40
+0*
