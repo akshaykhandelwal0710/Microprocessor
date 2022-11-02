@@ -3,16 +3,17 @@ module ram(
   input enable,
   input [7:0] bus,
   input rnw,
-  output reg [7:0] MBR,
+  output [7:0] MBR,
   output MFC
 );
   reg [15:0] memo[7:0];
+  reg [7:0] data_out = 'b0;
   initial
-    memo[1] = 8'b1000;
+    memo[0] = 8'b1;
   reg tmp = 0;
   always @(posedge enable)
     begin
-      if(rnw) MBR = memo[MAR[3:0]];
+      if(rnw) data_out = memo[MAR[3:0]];
       else memo[MAR[3:0]] = bus;
       tmp = 1;
     end
@@ -21,5 +22,6 @@ module ram(
     tmp = 0;
   
   assign MFC = tmp;
+  assign MBR = data_out;
   
 endmodule

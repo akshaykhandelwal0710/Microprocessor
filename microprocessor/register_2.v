@@ -10,11 +10,11 @@ module register_2(
   
   always @(posedge CLK)
 	begin
-      if (r_in) val_in <= ibus;
-      val_out <= val_in;
-    end
+    if (r_in) val_in <= ibus;
+    val_out <= val_in;
+  end
   
-  assign obus = (r_out ? val_out : obus);
+  assign obus = (r_out ? val_out : 'bz);
   assign value = val_out;
 
 endmodule

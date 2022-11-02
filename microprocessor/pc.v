@@ -11,6 +11,6 @@ module pc(
       addr_out <= addr_in;
     end
   
-  assign bus = (pc_out)? addr_out:bus;
+  assign bus = (pc_out)? addr_out:'bz;
   
 endmodule
