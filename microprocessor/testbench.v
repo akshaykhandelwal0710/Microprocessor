@@ -9,7 +9,7 @@ module test_bench;
       $dumpvars;
     end
   
- initial #200 $finish;
+ initial #400 $finish;
  initial
    begin
     clock = 0;

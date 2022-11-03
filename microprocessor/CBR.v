@@ -1,7 +1,7 @@
-module CBR #(parameter SZ = 23)(
+module CBR #(parameter SZ = 24)(
   input CLK,
   input [SZ-1:0] val_in,
-  output [SZ-1:0] CS_bus
+  output [SZ-1:0] val_out
 );
   reg [SZ-1:0] val = 'b0;
 
