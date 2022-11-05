@@ -4,7 +4,7 @@ module pc(
   input pc_out,
   output [7:0] bus
 );
-  reg[7:0] addr_in = 8'b0, addr_out = 8'b0;
+  reg[7:0] addr_in = 8'b1000, addr_out = 8'b1000;
   always @(posedge CLK)
     begin
       if (increment) addr_in <= addr_out + 1;

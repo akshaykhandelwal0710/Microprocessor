@@ -1,14 +1,16 @@
-module CBR #(parameter SZ = 24)(
+module CBR #(parameter sz = 21)(
   input CLK,
-  input [SZ-1:0] val_in,
-  output [SZ-1:0] val_out
+  input [1:0] rs,
+  input [1:0] rd,
+  input [sz-1:0] val_in,
+  output [sz-1:0] val_out
 );
-  reg [SZ-1:0] val = 'b0;
+  reg [sz-1:0] val = 'b0;
 
   always @(negedge CLK)
   begin
     val = val_in;
   end
 
-  assign CS_bus = val;
+  assign val_out = val;
 endmodule
