@@ -1,4 +1,4 @@
-module control_signal_decoder #(parameter sz = 21, parameter SZ = 27)(
+module control_signal_decoder #(parameter sz = 22, parameter SZ = 28)(
   input [sz-1:0] val_in,
   input [1:0] rs,
   input [1:0] rd,

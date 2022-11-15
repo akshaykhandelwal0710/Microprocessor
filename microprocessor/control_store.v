@@ -1,4 +1,4 @@
-module control_store #(parameter sz = 21, parameter N = 7, parameter pN = 128)(
+module control_store #(parameter sz = 22, parameter N = 7, parameter pN = 128)(
   input [N-1:0] CAR,
   output [sz-1:0] CBR
 );
@@ -6,7 +6,7 @@ module control_store #(parameter sz = 21, parameter N = 7, parameter pN = 128)(
 
   parameter add = 0, comp = 1, sub = 2, xorr = 3, andd = 4, orr = 5, 
     pc_out = 6, increment = 7, WMFC = 8, rnw = 9, //wmfc = wait for memory function to complete, rnw = read not-write
-    r_in = 10, r_out = 11, MAR_in = 12, MBR_out = 13, IR_in = 14, IR_out = 15, select_decoder = 16, dec_data_out = 17, dec_addr_out = 18, z_out = 19, endd = sz-1;
+    r_in = 10, r_out = 11, MAR_in = 12, MBR_out = 13, IR_in = 14, IR_out = 15, select_decoder = 16, dec_data_out = 17, dec_addr_out = 18, z_out = 19, flag_out = 20, endd = sz-1;
 
   parameter fetch = 0, load = 1, store = 2, move_immediate = 3, move_register = 4, sum_r = 5, sum_imm = 13, sub_r = 6, sub_imm = 14, andd_r = 7, andd_imm = 15, orr_r = 9, orr_imm = 10, xorr_r = 11, xorr_imm = 12;
 

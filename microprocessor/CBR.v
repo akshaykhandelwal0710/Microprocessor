@@ -1,4 +1,4 @@
-module CBR #(parameter sz = 21)(
+module CBR #(parameter sz = 22)(
   input CLK,
   input [1:0] rs,
   input [1:0] rd,

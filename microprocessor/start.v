@@ -1,7 +1,7 @@
 module start(
   input clk
 );
-  parameter SZ = 27, N = 7, pN = 128, sz = 21;
+  parameter SZ = 28, N = 7, pN = 128, sz = 22;
 
   parameter add = 0, comp = 1, sub = 2, xorr = 3, andd = 4, orr = 5, 
     pc_out = 6, increment = 7, WMFC = 8, rnw = 9, //wmfc = wait for memory function to complete, rnw = read not-write
