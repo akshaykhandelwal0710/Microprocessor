@@ -9,8 +9,8 @@ module register(
   
   always @(posedge CLK)
 	begin
-      if (r_in) val_out = ibus;
-    end
+    if (r_in) val_out = ibus;
+  end
   
   assign obus = (r_out ? val_out : 'bz);
 

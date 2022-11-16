@@ -8,7 +8,7 @@ module testbench;
 
   initial
   fork
-    arr_M[0] = 16'd1;
+    arr_M[0] = 16'b1111111111111111;
     arr_M[1] = 16'd2;
     arr_M[2] = 16'd3;
     arr_M[3] = 16'd4;

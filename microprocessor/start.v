@@ -1,5 +1,5 @@
 module start(
-  input clk
+  input CLK
 );
   parameter SZ = 28, N = 7, pN = 128, sz = 22;
 
@@ -11,12 +11,13 @@ module start(
   wire [7:0] bus;
   wire [SZ-1:0] CS_bus;
   wire [7:0] ins;
+  wire clk;
 
   wire MFC;
   wire [7:0] out_A, out_IR, out_MAR, out_MBR, out_ram;
   
   pc program_counter(.increment(CS_bus[increment]), .CLK(clk), .pc_out(CS_bus[pc_out]), .bus(bus));
-  cu control_unit(.CLK(clk), .ins(ins), .CS_bus(CS_bus), .out_IR(out_IR), .bus(bus));
+  cu control_unit(.CLK(CLK), .ins(ins), .CS_bus(CS_bus), .out_IR(out_IR), .bus(bus), .CLK_out(clk), .MFC(MFC));
   register_2 MAR(.r_in(CS_bus[MAR_in]), .r_out(1'b0), .CLK(clk), .ibus(bus), .obus(bus), .value(out_MAR));
   register_2 MBR(.r_in(1'b1), .r_out(CS_bus[MBR_out]), .CLK(clk), .ibus(out_ram), .obus(bus), .value(out_MBR));
   register_2 IR(.r_in(CS_bus[IR_in]), .r_out(CS_bus[IR_out]), .CLK(clk), .ibus(bus), .obus(bus), .value(out_IR));
