@@ -19,7 +19,7 @@ module cu #(parameter SZ = 28, parameter sz = 22, parameter N = 7)(
   reg out_clk = 'b0;
 
   decoder dec(.ins(out_IR), .ins_addr(out_dec), .rs(rs), .rd(rd), .dec_data_out(CS_bus[dec_data_out]), .dec_addr_out(CS_bus[dec_addr_out]), .bus(bus));
-  NAG nag(.CAR(out_CAR), .decoder(out_dec), .reset(CS_bus[endd]), .select_decoder(CS_bus[select_decoder]), .CLK(CLK_out), .next_addr(out_NAG));
+  NAG nag(.CAR(out_CAR), .decoder(out_dec), .reset(CS_bus[endd]), .select_decoder(CS_bus[select_decoder]), .next_addr(out_NAG));
   CAR car(.CLK(CLK_out), .val_in(out_NAG), .addr(out_CAR));
   control_store store(.CAR(out_CAR), .CBR(out_store));
   CBR cbr(.CLK(CLK_out), .val_in(out_store), .val_out(out_CBR));

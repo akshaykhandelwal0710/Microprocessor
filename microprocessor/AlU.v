@@ -15,7 +15,7 @@ module ALU #(parameter SZ = 28)(
   register Z(.r_out(CS_bus[z_out]), .CLK(CLK), .ibus(z_val), .obus(obus), .r_in(enable));
   register flag(.r_in(enable), .r_out(CS_bus[flag_out]), .CLK(CLK), .ibus(f_val), .obus(obus));
 
-  assign z_val = (CS_bus[add] ? acc + ibus : 
+  assign z_val = (CS_bus[add] ? acc + ibus: 
                 (CS_bus[sub] ? acc - ibus : 
                 (CS_bus[xorr] ? (acc ^ ibus) : 
                 (CS_bus[andd] ? (acc & ibus) : 

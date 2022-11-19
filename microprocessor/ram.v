@@ -43,7 +43,7 @@ module ram(
   always @(posedge enable)
     begin
       if(rnw) data_out = memo[MAR];
-      tmp = 1;
+      #10 tmp = 1;
     end
 
   always @(posedge CLK)

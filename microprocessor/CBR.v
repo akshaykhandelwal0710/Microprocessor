@@ -1,7 +1,5 @@
 module CBR #(parameter sz = 22)(
   input CLK,
-  input [1:0] rs,
-  input [1:0] rd,
   input [sz-1:0] val_in,
   output [sz-1:0] val_out
 );
