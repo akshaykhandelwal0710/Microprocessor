@@ -24,14 +24,19 @@ module ram(
     memo[8] = 8'b1; //Load acc from 1
     memo[9] = 8'b00110100; //B <- A
     memo[10] = 8'b0; //Load acc from 0
-    memo[11] = 8'b01111001; //C <- A + B
-    memo[12] = 8'b11111010; //C <- A - imm
+    memo[11] = 8'b01111001; //C <- compare A and B
+    memo[12] = 8'b11111010; //C <- compare A with imm
     memo[13] = 8'b01101001; //C <- A & B
     memo[14] = 8'b11101011; //C <- A & imm
     memo[15] = 8'b10001001; //C <- A | B
     memo[16] = 8'b10011001; //C <- A | imm
     memo[17] = 8'b10101001; //C <- A ^ B
     memo[18] = 8'b10111011; //C <- A ^ imm
+    memo[19] = 8'b01001001; //C <- A + B
+    memo[20] = 8'b11001001; //C <- A + imm
+    memo[21] = 8'b01011001; //C <- A - B
+    memo[22] = 8'b11011010; //C <- A - imm
+    memo[24] = 8'b00101011; //C <- imm
 
     //Data
     memo[0] = 8'h48;
